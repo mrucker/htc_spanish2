@@ -1,0 +1,49 @@
+{
+	"datum_endpoints": [
+		"https://digital-trails.org/api/v1/datums"
+	],
+
+	"home": {
+	        "title"    : "MindTrails",
+	        "flavor"   : "Undersatnd Your Thinking.\nFeel LessAnxious.",
+	        "button_tl": {"text":"¿Qué es MindTrails Español?", "icon":"/assets/home_mindtrails.png"  , "click": "script://rationale"},
+	        "button_tr": {"text":"Instrucciones"              , "icon":"/assets/home_instructions.png", "click": "script://instructions"},
+	        "button_br": {"text":"¿Qué es la Ansiedad?"       , "icon":"/assets/home_anxiety.png"     , "click": "script://anxiety"},
+	        "button_bl": {"text":"Recursos"                   , "icon":"/assets/home_resources.png"   , "click": "script://ending"}
+	},
+
+	"menu": [
+		{"text":"Home"                       , "icon":"/assets/menu_home.png"},
+		{"text":"¿Qué es MindTrails Español?", "icon":"/assets/menu_mindtrails.png"  , "click": "script://rationale"},
+		{"text":"Instrucciones"              , "icon":"/assets/menu_instructions.png", "click": "script://instructions"},
+		{"text":"¿Qué es la Ansiedad?"       , "icon":"/assets/menu_anxiety.png"     , "click": "script://anxiety"},
+		{"text":"Recursos"                   , "icon":"/assets/menu_resources.png"   , "click": "script://ending"},
+		{"text":"F.A.Q."                     , "icon":"/assets/menu_faq.png"         , "click": "script://faq"},
+		{"text":"Meet the Team"              , "icon":"/assets/menu_team.png"        , "click": "https://ert6g2.wixsite.com/hoosthinkcalmly/contact-the-team"},
+		{"text":"Get Help"                   , "icon":"/assets/menu_help.png"        , "click": "https://ert6g2.wixsite.com/hoosthinkcalmly/general-8"},
+		{"text":"Disclaimer"                 , "icon":"/assets/menu_disclaimer.png"}
+	],
+
+	"scripts": {
+		"biweekly"    : "/scripts/biweekly.json",
+		"eod"         : "/scripts/eod.json",
+		"faq"         : "/scripts/faq.json",
+		"instructions": "/scripts/instructions.json",
+		"intro"       : "/scripts/intro.json",
+		"microdoses"  : "/scripts/microdoses.json",
+		"resources"   : "/scripts/resources.json",
+		"rationale"   : "/scripts/rationale.json",
+		"ending"      : "/scripts/reason_for_ending.json",
+		"anxiety"     : "/scripts/what_is_anxiety.json"
+	},
+
+	"sessions": [ 
+		"script://intro", 
+		{"repeat": "script://microdoses" } 
+	],
+
+	"triggers": [
+		{ "type": "timing", "action": "survey", "content": "script://eod"     , "frequency": "nightly" },
+		{ "type": "timing", "action": "survey", "content": "script://biweekly", "frequency": "biweekly" }
+	]
+}

@@ -1,0 +1,12 @@
+name: Publish On Release
+            
+on:
+  release:
+    types: [published]
+
+jobs:
+  Release_Creation:
+    runs-on: ubuntu-latest    
+    steps:
+      - name: call workflow
+        uses: digital-trails/protocol-publisher@main
