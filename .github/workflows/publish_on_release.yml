@@ -3,6 +3,7 @@ name: Publish On Release
 on:
   release:
     types: [published]
+  workflow_dispatch:
 
 permissions:
   contents: write # allow us to update the published release
