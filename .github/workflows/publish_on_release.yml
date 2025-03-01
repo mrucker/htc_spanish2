@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest    
     steps:
       - name: call workflow
-        uses: digital-trails/protocol-publisher@v1.2.0
+        uses: digital-trails/protocol-publisher@v1.2.1
